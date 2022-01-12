@@ -7,14 +7,6 @@ HEAD_LEN = 4
 active_sockets = []
 
 
-def create_server():
-    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server.setblocking(False)
-    server.bind(('localhost', 8877))
-    server.listen()
-    return server
-
-
 def handle_connections(clients):
     while True:
         for client in clients:
